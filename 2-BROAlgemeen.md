@@ -32,7 +32,7 @@ Het innemen en uitgeven van gegevens verloopt idealiter volledig automatisch, wa
 Om de goede werking van het systeem en de kwaliteit van de gegevens te borgen, vindt functioneel beheer  plaats.
 
 ### Communicatie tussen systemen
-Om geautomatieseerde inname en uitgifte van gegevens mogelijk te maken moeten systemen met elkaar kunnen communiceren. Deze communicatie vindt plaats via zogeheten *webservices*. Informatiesystemen kunnen aan de BRO gekoppeld worden met behulp van BRO-software die te vinden is op <www.broinfo.nl>.
+Om geautomatieseerde inname en uitgifte van gegevens mogelijk te maken moeten systemen met elkaar kunnen communiceren. Deze communicatie vindt plaats via zogeheten *webservices*. Informatiesystemen kunnen aan de BRO gekoppeld worden met behulp van BRO-software die te vinden is op http://www.broinfo.nl.
 
 ### Inname webservice
 De gegevens van een registratieobject worden altijd via de *innamewebservice* aangeboden. De innamewebservice zorgt ervoor dat:
