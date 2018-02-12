@@ -19,6 +19,7 @@ De dataleverancier die voor het aanbieden van gegevens van de grondwatermonitori
 Het adres van de BRO-webservices is te vinden op www.broinfo.nl. 
 
 De webservice zorgt ervoor dat het systeem van de data-leverancier een verzoek tot het innemen van gegevens aan het BRO-systeem kan aanbieden, zorgt voor de verwerking van het verzoek en geeft het resultaat daarvan als antwoord van de BRO terug aan het systeem van de dataleverancier (Figuur 2).
+![Communicatie tussen leverancier en BRO ](media/communicatieSystemen.png)
 
 ## Innameverzoek
 
