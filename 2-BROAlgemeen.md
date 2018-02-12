@@ -1,6 +1,6 @@
-# Algemene opzet BasisRegistratieOndergrond
+# Opzet BasisRegistratie Ondergrond
 
-## Informatieketen BRO
+## Informatieketen
 
 ### Inname van gegevens via BRO
 De basisregistratie ondergrond is een systeem dat een schakel vormt in een informatieketen. Aan het begin van de keten staan bestuursorganen die opdracht geven tot de productie van gegevens, of zelf gegevens produceren. Die bestuursorganen worden bronhouders genoemd. De geproduceerde gegevens worden door een dataleverancier geleverd aan de beheerder van het systeem, de *registerbeheerder*. De *bronhouder* is verantwoordelijk voor de levering van gegevens. Hij kan besluiten zelf dataleverancier te zijn of andere partijen een machtiging voor levering te verlenen. De beheerder van de BRO registreert de aangeleverde gegevens en levert ze voor (her)gebruik door aan allerlei afnemers. 
@@ -32,27 +32,27 @@ Het innemen en uitgeven van gegevens verloopt idealiter volledig automatisch, wa
 Om de goede werking van het systeem en de kwaliteit van de gegevens te borgen, vindt functioneel beheer  plaats.
 
 ### Communicatie tussen systemen
-Om geautomatieseerde inname en uitgifte van gegevens mogelijk te maken moeten systemen met elkaar kunnen communiceren. Deze communicatie vindt plaats via zogeheten *webservices*. Het adres van de BRO-webservices is te vinden op www.broinfo.nl.
+Om geautomatieseerde inname en uitgifte van gegevens mogelijk te maken moeten systemen met elkaar kunnen communiceren. Deze communicatie vindt plaats via zogeheten *webservices*. Informatiesystemen kunnen aan de BRO gekoppeld worden met behulp van BRO-software die te vinden is op www.broinfo.nl.
 
 ### Inname webservice
-De dataleverancier die voor het aanbieden van gegevens van een registratieobject gebruik maakt van de innamewebservice, gebruikt via zijn eigen systeem algemene BRO-software die via het internet voor iedereen te vinden is. 
-
-De webservice zorgt ervoor dat het systeem van de data-leverancier een verzoek tot het innemen van gegevens aan het BRO-systeem kan aanbieden, zorgt voor de verwerking van het verzoek en geeft het resultaat daarvan als antwoord van de BRO terug aan het systeem van de dataleverancier (Figuur 2). 
+De gegevens van een registratieobject worden altijd via de *innamewebservice* aangeboden. De innamewebservice zorgt ervoor dat:
+* het systeem van de data-leverancier een verzoek tot het innemen van gegevens aan het BRO-systeem kan aanbieden
+* het verzoek verwerkt wordt
+* het resultaat van de verwerking als antwoord van de BRO terug aan het systeem van de dataleverancier gegeven wordt. 
 
 ![Communicatie tussen leverancier en BRO bij inname](media/communicatieSystemen.png)
 
-### Uitgifte webservice
-De data-afnemer die voor het opvragen van gegevens van grondwatermonitoringputten gebruik maakt van de uitgiftewebservice, gebruikt via zijn eigen systeem algemene BRO-software die via het internet voor iedereen te vinden is.  
+Om zich bij de registerbeheerder als gebruiker van de webservice te laten registreren, moet de organisatie van de dataleverancier beschikken over een *PKIoverheid services certificaat*.
 
-De webservice zorgt ervoor dat het systeem van de data-afnemer een verzoek tot verzending van een grondwatermonitoringput aan het BRO-systeem kan aanbieden, zorgt voor de verwerking van het verzoek en geeft het antwoord van de BRO terug aan het systeem van de data-afnemer (Figuur 2). Als alles goed is gegaan bevat het antwoord de opgevraagde gegevens.
+De gegevens die via de innamewebservice aan de BRO worden overgedragen staan in het IMBRO-XML formaat. Het IMBRO-XML formaat is de gegevensdefinitie omgezet naar de technische taal die voor de uitwisseling van gegevens met het systeem van de BRO gebruikt wordt. De technische uitwerking wordt toegelicht in de koppelvlakbeschrijving van de innamewebservice.
+
+### Uitgifte webservice
+De uitgiftewebservice zorgt ervoor dat het systeem van de data-afnemer een verzoek tot verzending van een grondwatermonitoringput aan het BRO-systeem kan aanbieden, zorgt voor de verwerking van het verzoek en geeft het antwoord van de BRO terug aan het systeem van de data-afnemer (Figuur 2). Als alles goed is gegaan bevat het antwoord de opgevraagde gegevens.
 
 ![Communicatie tussen leverancier en BRO bij uitgifte](media/communicatieSystemenUitgifte.png)
 
 ## Innameproces
 De gegevens van een registratieobject worden altijd via de *innamewebservice* aangeboden. De dataleverancier die de innamewebservice wil gebruiken moet over software beschikken die de webservice kan aanroepen. Met de eigen software heeft hij dan direct toegang tot het systeem van de basisregistratie ondergrond, het BRO-systeem, en kan hij snel en op betrouwbare wijze gegevens aanbieden.
-Om zich bij de registerbeheerder als gebruiker van de webservice te laten registreren, moet de organisatie van de dataleverancier beschikken over een *PKIoverheid services certificaat*.
-
-De gegevens die via de innamewebservice aan de BRO worden overgedragen staan in het IMBRO-XML formaat. Het IMBRO-XML formaat is de gegevensdefinitie omgezet naar de technische taal die voor de uitwisseling van gegevens met het systeem van de BRO gebruikt wordt. De technische uitwerking wordt toegelicht in de koppelvlakbeschrijving van de innamewebservice.
 
 ## Verwerking van een innameverzoek
 
