@@ -7,7 +7,7 @@ var respecConfig = {
     {
       name: "Jac Blom",
       company: "TNO - Geologische Dienst Nederland",
-      companyURL: "http://www.tno.nl/",
+      companyURL: "https://www.tno.nl/nl/aandachtsgebieden/energie/expertisegroepen/dino/",
       mailto: "jac.blom@tno.nl",
       note: ""    
     }  
