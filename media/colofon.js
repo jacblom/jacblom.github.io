@@ -15,7 +15,7 @@ var respecConfig = {
   shortName: "Grondwatermonitoringput",
   pubDomain: "jacblom", // Aanpassen na verplaatsing naar nieuwe Github repos 
   //previousURI: "https://www.geonovum.nl/BRO",
-  github: "https://github.com/jacblom",
+  github: "https://github.com/jacblom/jacblom.github.io",
   previousPublishDate: "2017-01-01",
   //previousStatus: "GN-WV",
   //localBiblio: {
