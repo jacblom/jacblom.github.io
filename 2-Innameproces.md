@@ -15,12 +15,16 @@ De gegevens die via de innamewebservice aan de BRO worden overgedragen staan in 
 
 
 ## Communicatie tussen systemen
+De dataleverancier die voor het aanbieden van gegevens van de grondwatermonitoringput gebruik maakt van de innamewebservice, gebruikt via zijn eigen systeem algemene BRO-software die via het internet voor iedereen te vinden is. 
+Het adres van de BRO-webservices is te vinden op www.broinfo.nl. 
+
+De webservice zorgt ervoor dat het systeem van de data-leverancier een verzoek tot het innemen van gegevens aan het BRO-systeem kan aanbieden, zorgt voor de verwerking van het verzoek en geeft het resultaat daarvan als antwoord van de BRO terug aan het systeem van de dataleverancier (Figuur 2).
 
 ## Innameverzoek
 
 ## Verwerking van een innameverzoek
 
-##Verwerking van een correctieverzoek
+## Verwerking van een correctieverzoek
 
 ## Registratie-object met levensloop
 
