@@ -21,3 +21,6 @@ De handboeken beschrijven hoe de processen voor inname en uitgifte globaal verlo
 De koppelvlakbeschrijvingen voor inname en uitgifte richten zich op:
 * de technisch specialisten die de aansluiting realiseren tussen de systemen van de dataleveranciers en het systeem van de BRO
 * de technisch specialisten die de aansluiting realiseren tussen de systemen van de data-afnemers en het systeem van de BRO
+
+## Contactinformatie
+Voor vragen, suggesties of opmerkingen over de inhoud van dit document kunt u contact opnemen met de servicedesk van de beheerder van de basisregistratie ondergrond via [mailto:info@basisregistratieondergrond.nl].
