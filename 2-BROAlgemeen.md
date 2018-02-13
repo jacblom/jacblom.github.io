@@ -52,3 +52,16 @@ De uitgiftewebservice zorgt ervoor dat het systeem van de data-afnemer een verzo
 
 ![Communicatie tussen leverancier en BRO bij uitgifte](media/communicatieSystemenUitgifte.png)
 
+## Kwaliteitsregimes
+
+De basisregistratie ondergrond stelt stringente eisen aan de gegevens van registratieobjecten. Er zijn echter veel gegevens van vóór de datum waarop de wet in werking is getreden. Die gegevens kunnen niet altijd aan dezelfde eisen voldoen als gegevens die na de inwerkingtreding van de wet ontstaan. Omdat de al bestaande gegevens waardevol zijn, heeft de wetgever besloten dat de basisregistratie ook die gegevens moet bevatten. Zodoende kent de BRO twee kwaliteitsregimes voor registratieobjecten: 
+
+1.	het kwaliteitsregime dat aangeeft dat een registratieobject aan de meest stringente eisen voldoet: IMBRO;
+2.	het kwaliteitsregime dat aangeeft dat een registratieobject aan minder stringente eisen voldoet: IMBRO/A.
+
+De objecten die zich naar de stringente regels voegen, zijn te herleiden tot een brondocument met kwaliteit IMBRO, en de overige tot een brondocument met kwaliteit IMBRO/A. 
+
+Om aansluiting op de BRO te vergemakkelijken is een periode van transitie voorzien voor nieuw geconstrueerde putten. In de periode van transitie is de aanlevering van het brondocument GMW-Inrichten in IMBRO en IMBRO/A toegestaan. De duur van de transitie voor de grondwatermonitoringput is nog niet bepaald. Na afloop van de transitieperiode mag alleen IMBRO worden aangeleverd.
+
+Het kwaliteitsregime van het object grondwatermonitoringput wordt bepaald door de kwaliteit van het brondocument dat bij het starten van registratie wordt ingenomen. 
+Het kwaliteitsregime van een object kan veranderen, maar alleen na het doorvoeren van een specifieke correctie. De noodzaak tot deze correctie zal zich zeer zelden voordoen. Correctie van het kwaliteitsregime is namelijk alleen mogelijk tijdens de periode van transitie en alleen voor nieuwe putten.
