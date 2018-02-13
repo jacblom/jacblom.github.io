@@ -1,6 +1,5 @@
-# Koppelvlakbeschrijving
-## Inleiding
-## Communicatiestandaarden
+# Koppelvlak Inname
+
 ## Operaties
 ### Registratie
 ### Correctie
