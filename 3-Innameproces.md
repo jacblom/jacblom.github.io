@@ -49,7 +49,8 @@ o	Indien zijn beoordeling aangeeft dat er iets fout gaat, ontvangt de datalevera
 
 Het resultaat van de verwerking is dat het brondocument in het register brondocumenten ondergrond is opgenomen, dat de gegevens eruit zijn gehaald en dat de onjuiste gegevens in de registratie ondergrond zijn verbeterd. De gegevens zijn dan voor eenieder beschikbaar.
 
-De stappen en de bijbehorende berichten worden in figuur 4 uitgebeeld. 
+De stappen en de bijbehorende berichten worden in onderstaande figuur uitgebeeld. 
+![VerwerkingRegistratieverzoek](media/VerwerkingRegistratieverzoek.png "Verwerking van een registratieverzoek")
 
 
 
