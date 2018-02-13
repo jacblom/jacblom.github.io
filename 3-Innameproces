@@ -1,4 +1,10 @@
 # Innameproces
+
+## Levenscyclus registratieobject
+
+*Hier tekst en plaatje toevoegen die de levensloop van registratieobjecten uitlegt*
+
+## Innameverzoek
 De dataleverancier biedt gegevens aan met het doel de gegevens op te laten nemen in de registratie ondergrond. Het proces van inname begint aan de kant van de dataleverancier met een verzoek. Vervolgens beoordeelt de basisregistratie ondergrond dat verzoek om, als alles goed is, de gegevens in het systeem op te nemen. Gaat er iets onverhoopt fout, dan wijst de basisregistratie ondergrond het verzoek af. In alle gevallen krijgt de dataleverancier een antwoord op het verzoek terug. 
 
 De basisregistratie ondergrond handelt de verzoeken altijd per object af. Dat wil zeggen één registratieobject tegelijk, in dit geval dus één grondwatermonitoringput. Het begrip innameverzoek heeft in de context van de basisregistratie ondergrond altijd betrekking op één registratieobject.
@@ -11,11 +17,23 @@ De verwerking van registratieverzoeken verloopt anders dan van correctieverzoeke
 
 Via een innameverzoek kan een dataleverancier niet alle gegevens van een registratieobject laten verwijderen. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.
 
-## Levenscyclus registratieobject
-
-## Innameverzoek
-
 ## Verwerking van een registratieverzoek
+De verwerking van een registratieverzoek verloopt geheel automatisch en volgens een vaste opeenvolging van stappen. Dit is waar het in het kort op neerkomt:
+
+1. De dataleverancier stuurt vanuit zijn systeem een registratieverzoek met daarin een brondocument.
+2. Het systeem van de BRO voert een toegangscontrole uit.
+3. Wanneer toegang tot het systeem van de BRO is verkregen, begint de controle van het verzoek en wordt onder meer vastgesteld of het verzoek inhoudelijk aan de gestelde eisen voldoet. 
+O	Wanneer de inhoudelijke controle fouten oplevert, wordt het verzoek afgewezen en ontvangt het systeem van de dataleverancier een bericht van afwijzing.
+4. Wanneer de inhoudelijke controle geen fouten oplevert en er geen technische problemen zijn, wordt het registratieverzoek door het systeem van de BRO geaccepteerd. De aangeboden gegevens worden met de gegevens die de BRO zelf genereert vastgelegd. Het BRO-systeem stuurt het systeem van de dataleverancier als antwoord het bericht dat diens registratieverzoek is verwerkt.
+
+De stappen en de bijbehorende berichten worden in het onderstaande plaatje uitgebeeld. 
+
+![VerwerkingRegistratieverzoek](/path/to/img.jpg "Verwerking van een registratieverzoek")
+
+Het resultaat van de verwerking is dat het brondocument in het register brondocumenten ondergrond is opgenomen, dat de gegevens eruit zijn gehaald en vastgelegd zijn in de registratie ondergrond. De gegevens zijn dan voor eenieder beschikbaar.
+
+Het verzoek van de dataleverancier en het antwoord dat de BRO daarop normaliter geeft worden berichten genoemd. In het geval zich technische problemen voordoen wordt het antwoord een melding genoemd.
+
 
 ## Verwerking van een correctieverzoek
 
