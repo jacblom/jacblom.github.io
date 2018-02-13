@@ -28,7 +28,7 @@ O	Wanneer de inhoudelijke controle fouten oplevert, wordt het verzoek afgewezen 
 
 De stappen en de bijbehorende berichten worden in het onderstaande plaatje uitgebeeld. 
 
-![VerwerkingRegistratieverzoek](VerwerkingRegistratieverzoek.png "Verwerking van een registratieverzoek")
+![VerwerkingRegistratieverzoek](Media/VerwerkingRegistratieverzoek.png "Verwerking van een registratieverzoek")
 
 Het resultaat van de verwerking is dat het brondocument in het register brondocumenten ondergrond is opgenomen, dat de gegevens eruit zijn gehaald en vastgelegd zijn in de registratie ondergrond. De gegevens zijn dan voor eenieder beschikbaar.
 
