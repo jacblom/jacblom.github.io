@@ -1,4 +1,4 @@
-# Opzet BasisRegistratie Ondergrond
+# Opzet Basisregistratie Ondergrond (BRO)
 
 ## Informatieketen
 
@@ -52,23 +52,3 @@ De uitgiftewebservice zorgt ervoor dat het systeem van de data-afnemer een verzo
 
 ![Communicatie tussen leverancier en BRO bij uitgifte](media/communicatieSystemenUitgifte.png)
 
-## Innameproces
-De dataleverancier biedt gegevens aan met het doel de gegevens op te laten nemen in de registratie ondergrond. Het proces van inname begint aan de kant van de dataleverancier met een verzoek. Vervolgens beoordeelt de basisregistratie ondergrond dat verzoek om, als alles goed is, de gegevens in het systeem op te nemen. Gaat er iets onverhoopt fout, dan wijst de basisregistratie ondergrond het verzoek af. In alle gevallen krijgt de dataleverancier een antwoord op het verzoek terug. 
-
-De basisregistratie ondergrond handelt de verzoeken altijd per object af. Dat wil zeggen één grondwatermonitoringput tegelijk. Het begrip innameverzoek heeft in de context van de basisregistratie ondergrond altijd betrekking op één grondwatermonitoringput.
-
-De gegevens die onderwerp zijn van een innameverzoek, vormen een geheel en dat wordt in de taal van de basisregistratie ondergrond een brondocument genoemd. Een brondocument bevat de gegevens die de dataleverancier van een bepaald object overdraagt aan de basisregistratie ondergrond. 
-
-Er bestaan twee categorieën innameverzoeken. Het hangt er namelijk vanaf wat de dataleverancier precies beoogt. 
-Wil een leverancier nieuwe gegevens aan de BRO overdragen die net beschikbaar zijn gekomen, of wil hij fouten verbeteren in de gegevens die al aanwezig zijn. In de basisregistratie ondergrond spreekt men van registratieverzoeken, resp. correctieverzoeken. 
-De verwerking van registratieverzoeken verloopt anders dan van correctieverzoeken. 
-
-Via een innameverzoek kan een dataleverancier niet alle gegevens van een registratieobject laten verwijderen. Verwijderen, of beter het uit registratie nemen van een object is een ingrijpende verandering in de registratie ondergrond, en daartoe kan pas worden besloten na zorgvuldig onderzoek. Het onderzoek begint bij de registratiebeheerder en uiteindelijk kan een object alleen na akkoord van de bronhouder uit registratie genomen worden. Het is bovendien goed om te weten dat de gegevens niet uit de registratie verwijderd worden. De gegevens blijven bestaan maar zijn niet langer voor gebruikers toegankelijk.
-
-## Verwerking van een innameverzoek
-
-## Verwerking van een correctieverzoek
-
-## Registratie-object met levensloop
-
-## Conversie registratie-object met voorgeschiedenis
