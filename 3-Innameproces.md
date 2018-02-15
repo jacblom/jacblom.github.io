@@ -52,8 +52,22 @@ Het resultaat van de verwerking is dat het brondocument in het register brondocu
 De stappen en de bijbehorende berichten worden in onderstaande figuur uitgebeeld. 
 ![VerwerkingRegistratieverzoek](media/VerwerkingRegistratieverzoek.png "Verwerking van een registratieverzoek")
 
+## Object met een levensloop
+De grondwatermonitoringput is een object dat voor langere tijd in de werkelijkheid bestaat en tijdens zijn bestaan kunnen veranderingen optreden die geregistreerd moeten worden in de basisregistratie ondergrond. In de taal van de basisregistraties is een grondwatermonitoringput een object met een materiële geschiedenis. 
+Registratie van de gegevens van een grondwatermonitoringput is dus geen eenmalige gebeurtenis, maar een proces dat zo lang duurt als de put bestaat. Het heeft een begin en een eind, en wanneer zich tussentijds een relevante verandering voordoet, wordt de registratie weer opgepakt en worden de nieuwe gegevens aangeboden. 
+
+De gegevens over de gebeurtenissen in het leven van een grondwatermonitoringput, worden zo snel mogelijk in de registratie ondergrond geregistreerd. Welke gegevens dat zijn hangt af van de gebeurtenis. 
+Zodra de constructie van de put voltooid is en de gegevens door of voor de bronhouder zijn vastgelegd, kan het registreren van gegevens beginnen. Bij het begin van de registratie biedt de dataleverancier een brondocument aan dat alle gegevens bevat die de put beschrijven; dat brondocument heet GMW-Inrichten. Wanneer het proces van registratie vervolgd wordt omdat zich in de werkelijkheid een bepaalde gebeurtenis heeft voorgedaan, biedt de dataleverancier de nieuwe gegevens ter registratie aan. Dit wordt zolang de put bestaat het aanvullen van de registratie genoemd. Het registratieproces eindigt wanneer geregistreerd is dat de put is opgeruimd, wat wil zeggen dat de put niet langer bestaat. Bij aanvullen heeft de dataleverancier de keuze uit elf verschillende brondocumenten. Het brondocument dat bij het opruimen van de put hoort heet GMW-Opruimen. 
+De verschillende typen brondocumenten worden allemaal via dezelfde webservice aangeboden, maar de gegevens verschillen en de controles die bij de verwerking van de gegevens worden uitgevoerd ook. Na het beëindigen van de registratie kunnen geen nieuwe gegevens meer worden aangeleverd. Wel kunnen er onjuistheden worden hersteld. 
+
+Voor het verbeteren van onjuistheden in de geregistreerde gegevens van een grondwatermonitoringput zijn verschillende typen verzoeken nodig. Dat komt doordat de verschillende registratieverzoeken elkaar netjes moeten opvolgen in de tijd om de materiële geschiedenis van de put in de registratie ondergrond correct op te bouwen. Een dataleverancier kan zich op allerlei manieren vergissen. Hij kan onjuiste gegevens aanleveren, maar ook vergeten een verzoek op tijd aan te bieden of een fout maken in een datum die in het brondocument staat. 
+
+Er worden vier typen correctieverzoeken onderscheiden en dat zijn:
+* het verzoek gegevens te vervangen,
+* het verzoek gegevens in te voegen,
+* het verzoek gegevens te verwijderen, 
+* het verzoek gegevens te verplaatsen. 
+
+De verschillende typen correctieverzoeken worden net als de registratieverzoeken via de innamewebservice aangeboden en de gegevens en controles verschillen per type verzoek. 
 
 
-## Verwerking van een beëindigingsverzoek
-
-## Conversie registratie-object met voorgeschiedenis
