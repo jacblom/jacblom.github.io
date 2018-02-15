@@ -12,6 +12,10 @@ Ze beschrijven de Application Programming Interfaces (API's) van de webservices.
 De teksten zijn echter zo geschreven dat overige belangstellenden de technische werking van het koppelvlak kunnen volgen. 
 
 ## Belanghebbenden
+Registerhouder:
+Registerbeheerder:
+Bronhouder:
+Dataleverancier:
 
 ## Doel en doelgroep
 
