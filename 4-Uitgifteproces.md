@@ -35,7 +35,7 @@ O	Wanneer de inhoudelijke controle fouten oplevert, wordt het verzoek afgewezen 
 Het verzoek van de data-afnemer en het antwoord dat de BRO daarop normaliter geeft worden berichten genoemd. In het geval zich technische problemen voordoen, wordt het antwoord een melding genoemd. 
 
 De stappen en de bijbehorende berichten worden in het onderstaande plaatje uitgebeeld.
-![PrcVerzoekVerzendingKengegevens](https://github.com/jacblom/jacblom.github.io/media/PrcVerzoekVerzendingKengegevens.png)
+![PrcVerzoekVerzendingKengegevens](media/PrcVerzoekVerzendingKengegevens.png)
 
 ## Opvragen gegevens
 Het opvragen van de gegevens van een grondwatermonitoringput verloopt iets anders dan het opvragen van kengegevens.
