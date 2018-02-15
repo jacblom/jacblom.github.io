@@ -35,9 +35,7 @@ O	Wanneer de inhoudelijke controle fouten oplevert, wordt het verzoek afgewezen 
 Het verzoek van de data-afnemer en het antwoord dat de BRO daarop normaliter geeft worden berichten genoemd. In het geval zich technische problemen voordoen, wordt het antwoord een melding genoemd. 
 
 De stappen en de bijbehorende berichten worden in het onderstaande plaatje uitgebeeld.
-![PrcVerzoekVerzendingKengegevens](media/PrcVerzoekVerzendingKengegevens.png)
-![PrcVerzoekVerzendingKengegevens](media/PrcVerzoekVerzendingKengegevens.png "Logo Title Text 1")
-![VerwerkingRegistratieverzoek](media/VerwerkingRegistratieverzoek.png "Verwerking van een registratieverzoek")
+![PrcVerzoekVerzendingKengegevens](media/PrcVerzoekVerzendingKengegevens.png "Verwerking van een verzoek tot verzending van kengegevens")
 
 
 ## Opvragen gegevens
