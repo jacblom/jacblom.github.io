@@ -36,6 +36,7 @@ Het verzoek van de data-afnemer en het antwoord dat de BRO daarop normaliter gee
 
 De stappen en de bijbehorende berichten worden in het onderstaande plaatje uitgebeeld.
 ![PrcVerzoekVerzendingKengegevens](media/PrcVerzoekVerzendingKengegevens.png)
+![PrcVerzoekVerzendingKengegevens](media/PrcVerzoekVerzendingKengegevens.png "Logo Title Text 1")
 
 ## Opvragen gegevens
 Het opvragen van de gegevens van een grondwatermonitoringput verloopt iets anders dan het opvragen van kengegevens.
