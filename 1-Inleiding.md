@@ -29,4 +29,5 @@ Voor vragen, suggesties of opmerkingen over de inhoud van dit document kunt u co
 
 
 | Versie| Datum| Omschrijving|
-| 0.1  15-02-2018  | Eerste versie voor de pilot met ReSpec documentatie |
+--- | --- | ---
+| 0.1  | 15-02-2018  | Eerste versie voor de pilot met ReSpec documentatie |
