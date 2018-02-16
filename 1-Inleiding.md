@@ -23,7 +23,7 @@ Primaire doelgroepen:
 ## Leeswijzer
 
 ## Contactinformatie
-Voor vragen, suggesties of opmerkingen over de inhoud van dit document kunt u contact opnemen met de servicedesk van de beheerder van de basisregistratie ondergrond via <info@basisregistratieondergrond.nl>.
+Voor vragen, suggesties of opmerkingen over de inhoud van dit document kunt u contact opnemen met de servicedesk van de beheerder van de basisregistratie ondergrond via info@basisregistratieondergrond.nl.
 
 ## Wijzigingshistorie
 
