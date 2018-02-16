@@ -14,12 +14,12 @@ Dataleverancier:
 ## Doel en doelgroep
 
 Dit document richt zich op de partijen die 
-* grondwatermonitoringput aan de registerbeheerder van de BRO aanbieden;
+* gegevens van grondwatermonitoringputten aan de registerbeheerder van de BRO willen aanbieden;
 * gegevens over grondwatermonitoringputten van de BRO willen opvragen.
 
 Het beschrijft hoe het proces van gegevensinname en opvragen globaal verloopt.
 
-Het doelen die hierbij worden nagestreefd zijn:
+De doelen die hierbij worden nagestreefd zijn:
 * afnemers van gegevens in algemeen begrijpelijke bewoordingen inzicht geven in de stappen die in het innameproces worden doorlopen;
 * de dataleveranciers in algemeen begrijpelijke bewoordingen inzicht geven in de stappen die in het uitgifteproces worden doorlopen;
 * partijen, leveranciers en afnemers, informeren over het gehanteerde begrippenkader
