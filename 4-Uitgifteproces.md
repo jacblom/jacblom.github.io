@@ -21,6 +21,7 @@ In de volgende paragrafen wordt de verwerking in meer detail beschreven.
 
 
 ## Opvragen kengegevens
+### Processtappen
 Het opvragen van kengegevens verloopt volgens een vaste opeenvolging van stappen.
 Dit is waar het in het kort op neerkomt:
 
@@ -37,6 +38,14 @@ Het verzoek van de data-afnemer en het antwoord dat de BRO daarop normaliter gee
 De stappen en de bijbehorende berichten worden in het onderstaande plaatje uitgebeeld.
 
 ![PrcVerzoekVerzendingKengegevens](media/PrcVerzoekVerzendingKengegevens.png "Verwerking van een verzoek tot verzending van kengegevens")
+
+### Verzoek tot verzending van kengegevens
+Het opvragen van de kengegevens van een aantal grondwatermonitoringputten verloopt op basis van één of meer kenmerken.
+Het belangrijkste onderdeel van het verzoek tot verzending van kengegevens is de kenmerkenverzameling, dat is het geheel van kenmerken waaraan de grondwatermonitoringput die de afnemer wil krijgen moet voldoen. Door het meegeven van kenmerken kan de data-afnemer de zoekvraag preciseren naar plaats, tijd en aard van de constructie. 
+De kenmerken die de data-afnemer kan kiezen, worden in hoofdstuk 5 gespecificeerd. Het is een keuze uit de gegevens die in de catalogus voor de grondwatermonitoringput zijn beschreven, met daarbij aangegeven hoe de waarde moet worden gespecificeerd. 
+De data-afnemer moet als kenmerk in ieder geval opgeven in welk gebied de locatie van de grondwatermonitoringput moet liggen. Dat kenmerk kan hij combineren met een of meer andere kenmerken.
+
+Naast deze kenmerken moet de data-afnemer een verzoekkenmerk meegeven. Dat gegeven kan worden gebruikt in de communicatie met de servicedesk, bijvoorbeeld als er iets mis is gegaan en de data-afnemer wil over het probleem contact zoeken met de servicedesk.
 
 
 ## Opvragen gegevens
