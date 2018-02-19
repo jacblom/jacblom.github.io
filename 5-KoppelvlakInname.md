@@ -51,10 +51,102 @@ De correctie van het type verwijderen is een correctie die **wel** ingrijpt in d
 
 Om de fout te herstellen, dient de dataleverancier een verzoek in met het doel de betreffende gegevens te verwijderen uit de tijdlijn. De gebeurtenis wordt opgezocht in de putgeschiedenis en verwijderd uit de tijdlijn van de putgeschiedenis. Van de betreffende gegevens (rondom de verwijderde plek in de tijdlijn) worden de waarden voor begin geldigheid (zie innamehandboek) en einde geldigheid aangepast, afhankelijk van het feit of een gegeven voor of na de verwerking van de delete operatie vanwege de verwijderde gebeurtenis van waarde is veranderd of juist niet meer. 
 
-## Correctie
+## Verwerking
+De verwerking van een registratieverzoek of een correctieverzoek verloopt volgens een vast patroon, maar er is wel een verschil tussen beide type verzoeken.
+
+### Registratie
+De verwerking van een registratieverzoek (de register operatie) verloopt volgens het hierna weergegeven patroon. Een registratie operatie van de GMW innamewebservice begint bij het doen van een registratieverzoek door middel van een request en eindigt met een response.
+
+![Verwerken registratieverzoek] (PrcWebserviceRegistratie.png "Verwerking van een registratieverzoek")
+
+Stap 1: Doen van een registratieverzoek
+Het initiatief om een operatie te beginnen ligt bij het systeem van de dataleverancier. Dat roept de register operatie van de *GMW innamewebservice* aan met het *registrationRequest* als parameter.
+
+Stap 2: Uitvoeren toegangscontrole 
+Dit bestaat uit identificatie, authenticatie, versleuteling en autorisatie.
+
+Voor de beveiliging van de gegevensuitwisseling worden, conform de Digikoppeling specificaties, PKIoverheid services server certificaten gebruikt. Zowel de dataleverancier als de BRO beschikt over een dergelijk certificaat. In het certificaat is een **identificatie** op basis van 20 cijfers opgenomen die uniek is voor de houder van het certificaat. 
+
+Op het moment dat het systeem van een dataleverancier een operatie aanroept van de webservice van het BRO-systeem wisselen beide systemen eerst hun PKIoverheid services server certificaten uit. Aan de hand van de identificatie in de certificaten weten beide partijen met wie gegevens¬uitwisseling plaatsvindt. De techniek van het PKIoverheid services server certificaat garandeert dat de identificatie in het certificaat ook daadwerkelijk van die partij is (**authenticatie**).
+
+Als authenticatie succesvol is verlopen, worden beide certificaten vervolgens gebruikt om al het dataverkeer tussen de systemen te **versleutelen**. Deze versleuteling maakt het voor derden onmogelijk om de data te lezen of te wijzigen.
+
+Voor het aanbieden van gegevens aan het BRO-systeem zijn rechten nodig. Aan de hand van de identificatie in het certificaat wordt bepaald of het systeem van de dataleverancier **geautoriseerd** is de operatie uit te voeren. Als hierbij een fout optreedt, ontvangt de dataleverancier een melding met een http-statuscode.
+
+Als niet wordt voldaan aan de toegangscontrole, dan leidt dit tot:
+•	Een http ‘401 Unauthorized’ foutmelding.
+•	Of een ‘ssl error invalid certificate’ foutmelding.
+•	Of een andere http-foutmelding met een http-statuscode anders dan ‘200 OK’.
+
+Stap 3: Controleren verzoek
+Als de toegangscontrole succesvol is verlopen, dan wordt het *request* technisch en inhoudelijk gecontroleerd. 
+
+De technische controle vindt plaats door het *request* te valideren op basis van de XSD. Als hierbij fouten gevonden worden, dan worden deze beschouwd als een technische fout van het systeem van de dataleverancier en teruggegeven als een *parseFault*.
+
+De inhoudelijke controle vindt plaats door het *request* te controleren volgens de regels die zijn gedefinieerd in de catalogus of het innamehandboek (*business rules*). Deze regels zijn niet in de XSD vastgelegd, maar worden gecontroleerd door de programmatuur van het BRO-systeem. Voorbeelden van controles zijn: 
+•	Is een waarde niet groter dan de toegestane maximale waarde?
+•	Voldoet een waarde aan de toegestane waardes voor een gegeven?
+Als hierbij fouten worden gevonden, dan worden deze beschouwd als een gebruiksfout en teruggegeven in een *response* bericht.
+
+Stap 4: Vastleggen van gegevens
+Als alle controles succesvol zijn verlopen dan legt het BRO-systeem de aangeboden gegevens vast en wordt het resultaat teruggegeven in een response bericht.
+
+### Correctie
+De verwerking van een correctieverzoek (de operaties *replace*, *insert*, *move* en *delete*) verloopt volgens het hieronder weergegeven patroon. In de verwerking zijn vijf stappen te onderkennen; deze zijn in onderstaande afbeelding weergegeven en worden vervolgens toegelicht.
+
+![Verwerking correctieverzoek] (PrcWebserviceCorrectie.png "Verwerking van een correctieverzoek")
+
+De eerste drie stappen in de verwerking zijn hetzelfde als bij een registratieverzoek, maar nadat het BRO-systeem heeft gecontroleerd of alles goed is, neemt de registratiebeheerder de controle over.
+
+Stap 1: Doen van een correctieverzoek
+Het initiatief om een operatie te beginnen ligt bij het systeem van de dataleverancier. Dat roept de desbetreffende operatie van de GMW innamewebservice aan met het *correctionRequest* als parameter. In het *correctionRequest* geeft hij aan waarom hij het correctieverzoek indient.
+
+Stap 2: Uitvoeren toegangscontrole 
+Zie stap 2 bij de beschrijving van de verwerking van een registratieverzoek.
+
+Stap 3: Controleren verzoek
+Deze stap lijkt veel op stap 3 bij de beschrijving van de verwerking van een registratieverzoek. Aanvullende controles, die de programmatuur van het BRO-systeem uitvoert bij een correctieverzoek, zijn: 
+* Bestaat het te corrigeren registratieobject in de BRO?
+* Voldoet het correctieverzoek aan procesmatige eisen? Bijvoorbeeld: mag de dataleverancier dit specifieke object corrigeren?
+
+Als bij deze stap fouten worden gevonden, dan worden deze beschouwd als een gebruiksfout en teruggegeven in een *response* bericht met daarin reden en tijdstip van afwijzing.
+
+Als hierbij geen fouten worden gevonden, dan wordt het correctieverzoek geaccepteerd en vastgelegd, maar nog niet verwerkt in de basisregistratie. Voordat het correctieverzoek wordt verwerkt in de basisregistratie wordt het verzoek eerst nog beoordeeld door de registratie-beheerder zoals beschreven in stap 4. Het BRO-systeem reageert met een *response* bericht met daarin het tijdstip van acceptatie.
+
+Stap 4: Beoordelen correctieverzoek
+Nadat het correctieverzoek is vastgelegd neemt de registratiebeheerder de verwerking over en voert een inhoudelijke controle uit of het correctieverzoek verwerkt mag worden in de basisregistratie.
+
+Als de registratiebeheerder een correctieverzoek afwijst, dan wordt een *email* naar de dataleverancier verzonden met daarin reden en tijdstip van bezwaar. Een beschrijving van de inhoud van deze email valt buiten de scope van deze koppelvlakbeschrijving; zie het innamehandboek voor nadere informatie. Een dataleverancier kan het emailadres kenbaar maken tijdens het aanmelden bij de BRO.
+
+Stap 5: Vastleggen van gegevens
+Als alle controles succesvol zijn verlopen dan verwerkt het BRO-systeem de correctie in de basisregistratie en wordt een email naar de dataleverancier verzonden met daarin het tijdstip van correctie. Een dataleverancier kan het emailadres kenbaar maken tijdens het aanmelden bij de BRO.
+
+
 ## Berichten bij registratie starten
-### Bericht registratieverzoek
-### Bericht van afwijzing
+Bij een *register* operatie zijn drie berichten van toepassing: een registratieverzoek, een bericht van afwijzing en een bericht van registratie. Deze paragraaf beschrijft de inhoud van deze berichten bij een ‘registratie starten’ gebeurtenis.
+
+### Request: registratieverzoek
+Onderstaande figuur geeft de mapping weer van het registratieverzoek in het innamehandboek op het datatype *RegistrationRequest* in dit document (zie paragraaf 6.1), zoals gebruikt door de operatie *register* (zie hoofdstuk 5).
+
+![RequestRegistratieStarten] (BrtReqRegistratieStarten.png)
+
+Het element brondocumenttype in het registratieverzoek komt niet voor in het *RegistrationRequest*, omdat dit gegeven impliciet bekend is, gegeven de inhoud van het element *sourceDocument*.
+
+Het element *sourceDocument* bevat alle gegevens die in de catalogus voor het registratieobject Grondwatermonitoringput zijn gespecificeerd, met uitzondering van de gegevens die door het BRO-systeem worden gegenereerd of afgeleid uit het RegistrationRequest.
+
+
+### Response: bericht van afwijzing
+Het innamehandboek benoemt als mogelijke reactie op een registratieverzoek een bericht van afwijzing. De webservice gebruikt hiervoor een *response* van het datatype *IntakeResponse*.
+
+![ResponseregistratieAfwijzen] (BrtRespRegistratieStartAfwijzing.png)
+
+Het handboek definieert een aantal berichten als antwoord op een innameverzoek. In de SOAP webservice definities mag elk *request* slechts één *response* hebben. Daarom is het element *responseType* toegevoegd, om de betekenis van de response te duiden. In dit geval heeft het element responseType de vaste waarde rejection.
+
+De waarde van de elementen requestReference en objectIdAccountableParty wordt overgenomen uit het request c.q. het sourceDocument in het request. De waarde van de overige elementen wordt toegekend door de webservice. Het element rejectionReason bevat een waarde uit de tabel met gebruiksfouten; zie het innamehandboek.
+
+Als deze response wordt gegeven omdat er een of meer gebruiksfouten in het sourceDocument zijn geconstateerd, dan is de waarde van rejectionReason “er zijn 1 of meer fouten geconstateerd in het brondocument” en volgen er na dit element een of meer sourceDocumentErrors. 
+
+
 ### Bericht van registratie
 ## Berichten bij registratie aanvullen en beëindigen
 ### Bericht registratieverzoek
