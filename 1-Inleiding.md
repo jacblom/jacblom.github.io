@@ -1,15 +1,5 @@
-##	Inleiding
+#	Inleiding
 In de basisregistratie ondergrond (BRO) wordt een aantal typen gegevens geregistreerd, de registratieobjecten. Een van de registratieobjecten is de 'Grondwatermonitoringput'. 
-
-## Belanghebbenden
-Registerhouder:
-
-Registerbeheerder:
-
-Bronhouder:
-
-Dataleverancier:
-
 
 ## Doel en doelgroep
 

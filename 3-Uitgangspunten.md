@@ -6,7 +6,25 @@ Een organisatie kan niet zomaar gegevens aan de BRO aanbieden. Een organisatie m
 Wanneer een bronhouder zelf gegevens wil aanbieden, is er sprake van een bilaterale overeenkomst en kan de bronhouder zich direct als dataleverancier laten registreren. Wanneer een intermediaire partij namens een bronhouder gegevens wil aanleveren, is sprake van een overeenkomst tussen drie partijen.
 
 De gegevens van de grondwatermonitoringput worden altijd via de innamewebservice aangeboden. De dataleverancier die de innamewebservice wil gebruiken moet over software beschikken die de webservice kan aanroepen. Met de eigen software heeft hij dan direct toegang tot het systeem van de basisregistratie ondergrond, het BRO-systeem, en kan hij snel en op betrouwbare wijze gegevens aanbieden.
-Om zich bij de registerbeheerder als gebruiker van de webservice te laten registreren, moet de organisatie van de dataleverancier beschikken over een PKIoverheid services certificaat.
+
+Deze toegangsbeveiliging voor de BRO bestaat achtereenvolgens uit 
+* identificatie
+* authenticatie
+* versleuteling 
+* autorisatie
+
+Voor de beveiliging van de gegevensuitwisseling worden, conform de Digikoppeling specificaties, PKIoverheid services server certificaten gebruikt. Zowel de dataleverancier als de BRO beschikt over een dergelijk certificaat. In het certificaat is een **identificatie** op basis van 20 cijfers opgenomen die uniek is voor de houder van het certificaat. 
+   
+Op het moment dat het systeem van een dataleverancier gebruik wil gaan maken van een webservice van het BRO-systeem wisselen beide systemen eerst hun PKIoverheid services server certificaten uit. Aan de hand van de identificatie in de certificaten weten beide partijen met wie gegevensuitwisseling plaatsvindt. De techniek van het PKIoverheid services server certificaat garandeert dat de identificatie in het certificaat ook daadwerkelijk van die partij is (**authenticatie**).
+   
+Als authenticatie succesvol is verlopen, worden beide certificaten vervolgens gebruikt om al het dataverkeer tussen de systemen te **versleutelen**. Deze versleuteling maakt het voor derden onmogelijk om de data te lezen of te wijzigen.
+   
+Voor het aanbieden van gegevens aan het BRO-systeem zijn rechten nodig. Aan de hand van de identificatie in het certificaat wordt bepaald of het systeem van de dataleverancier **geautoriseerd** is de operatie uit te voeren. Als hierbij een fout optreedt, ontvangt de dataleverancier een melding met een http-statuscode.
+   
+Als niet wordt voldaan aan de toegangscontrole, dan leidt dit tot één van de volgende foutmeldingen:
+* http foutmelding ‘401 Unauthorized’
+* foutmelding ‘ssl error invalid certificate’
+* een andere http-foutmelding met een http-statuscode anders dan ‘200 OK’.
 
 ## Berichten en meldingen
 
