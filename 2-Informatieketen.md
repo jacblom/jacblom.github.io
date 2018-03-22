@@ -44,6 +44,8 @@ Met eigen software heeft de dataleverancier dan direct toegang tot het systeem v
 
 ![Communicatie tussen leverancier en BRO bij inname](media/SeqRegistreren1.png)
 
+![Communicatie tussen leverancier en BRO bij inname](media/SeqRegistreren2.png)
+
 Om zich bij de registerbeheerder als gebruiker van de webservice te laten registreren, moet de organisatie van de dataleverancier beschikken over een *PKIoverheid services certificaat*.
 De gegevens die via de innamewebservice aan de BRO worden overgedragen staan in het IMBRO-XML formaat. Het IMBRO-XML formaat is de gegevensdefinitie omgezet naar de technische taal die voor de uitwisseling van gegevens met het systeem van de BRO gebruikt wordt. De technische uitwerking wordt toegelicht in de koppelvlakbeschrijving van de innamewebservice.
 
